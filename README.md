@@ -4,26 +4,16 @@
 
 ## 安装方式
 
-### 通过 Git 源安装
-
-```bash
-claude plugin add --git https://gitee.com/zhujingfeng/my-plugins serena
-claude plugin add --git https://gitee.com/zhujingfeng/my-plugins doc-tools
-```
-
 ### 通过 Marketplace 安装
 
 先将本仓库添加为插件市场：
 
 ```bash
-claude marketplace add --git https://gitee.com/zhujingfeng/my-plugins
-```
+/plugin marketplace add jeffrey1205/my-plugins
 
-然后安装需要的插件：
+/plugin install my-plugins/serena
 
-```bash
-claude plugin add serena
-claude plugin add doc-tools
+/plugin install my-plugins/doc-tools
 ```
 
 ## 插件列表

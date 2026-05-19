@@ -23,6 +23,20 @@
 | [serena](./plugins/serena) | MCP Server | 语义代码分析 MCP 服务器，提供智能代码理解、重构建议和代码库导航 |
 | [docs](./plugins/docs) | Skill | 文档处理工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
 
+## 前置依赖
+
+### serena-agent 安装
+
+serena 插件需要先安装 serena-agent：
+
+```bash
+# 安装
+uv tool install --from git+https://github.com/oraios/serena serena-agent
+
+# 更新
+uv tool upgrade serena-agent
+```
+
 ## 目录结构
 
 ```

@@ -51,23 +51,43 @@ PYEOF
 
 ### 中文字体问题
 
-PyMuPDF 提取含中文的 PDF 时，如果 PDF 使用了嵌入式 CJK 字体，`get_text()` 可能返回乱码或 `····`。
+PyMuPDF 新版 (>=1.26) 已内置 CJK 字体支持，直接调用 `get_text()` 即可正常提取中文。
 
-**解决方法**：注册 CJK 字体后再提取：
+若遇乱码或特殊字体 PDF，可用备选方案：
+- **命令行**: `pdftotext file.pdf output.txt`
+- **OCR**: 渲染为图片后用 tesseract（见下方扫描版处理）
 
-```bash
-python3 << 'PYEOF'
-try:
-    import fitz
-except ImportError:
-    import pymupdf as fitz
+---
 
-fitz.install_font('CJK')  # 注册中日韩字体
-doc = fitz.open('file.pdf')
-text = doc[0].get_text()
-print(text)
-doc.close()
-PYEOF
+### get_text 参数详解
+
+```python
+import pymupdf
+doc = pymupdf.open('file.pdf')
+page = doc[0]
+
+# 1. 基本提取（纯文本）
+text = page.get_text()  # 或 page.get_text("text")
+
+# 2. 按阅读顺序提取（多栏 PDF 推荐）
+text = page.get_text("text", sort=True)
+
+# 3. blocks 格式：返回坐标+文本列表，便于精确定位
+blocks = page.get_text("blocks", sort=True)
+# 每个 block: (x0, y0, x1, y1, text, block_no, block_type)
+for b in blocks:
+    print(f"位置: ({b[0]:.1f}, {b[1]:.1f}) → 文本: {b[4][:50]}")
+
+# 4. dict 格式：包含字体、大小、颜色等详细信息
+d = page.get_text("dict")
+for block in d["blocks"]:
+    for line in block["lines"]:
+        for span in line["spans"]:
+            print(f"字体: {span['font']}, 大小: {span['size']}, 文本: {span['text']}")
+
+# 5. 常用 flags 组合
+text = page.get_text("text", flags=pymupdf.TEXT_PRESERVE_WHITESPACE)
+text = page.get_text("text", flags=pymupdf.TEXT_DEHYPHENATE)  # 去除连字符断行
 ```
 
 ---

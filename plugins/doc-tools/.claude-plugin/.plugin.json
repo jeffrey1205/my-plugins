@@ -1,0 +1,10 @@
+{
+  "name": "doc-tools",
+  "description": "文档处理工具 Skill 插件：支持 Word (.doc/.docx)、PowerPoint (.pptx)、PDF、Excel (.xlsx/.xls)、图片 OCR 等文档处理场景，提供环境检测、工具速查和按文件类型的参考文档索引。",
+  "version": "1.0.0",
+  "author": {
+    "name": "Oraios"
+  },
+  "homepage": "https://gitee.com/zhujingfeng/my-plugins",
+  "license": "MIT"
+}

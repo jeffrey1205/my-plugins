@@ -1,0 +1,10 @@
+{
+  "name": "serena",
+  "description": "Semantic code analysis MCP server providing intelligent code understanding, refactoring suggestions, and codebase navigation through language server protocol integration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Oraios"
+  },
+  "homepage": "https://gitee.com/zhujingfeng/my-plugins",
+  "license": "MIT"
+}

@@ -1,4 +1,4 @@
-# my-plugins
+# claude-plugins
 
 个人 Claude Code 插件集合，包含开发工具、文档处理 Skill 等扩展。
 
@@ -9,11 +9,11 @@
 先将本仓库添加为插件市场：
 
 ```bash
-/plugin marketplace add jeffrey1205/my-plugins
+/plugin marketplace add jeffrey1205/cc-hub
 
-/plugin install my-plugins/serena
+/plugin install cc-hub/serena
 
-/plugin install my-plugins/docs
+/plugin install cc-hub/docs
 ```
 
 ## 插件列表

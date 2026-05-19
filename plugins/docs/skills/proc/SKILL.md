@@ -1,5 +1,5 @@
 ---
-name: doc-tools
+name: proc
 description: |
   当用户需要处理文档文件时触发：Word (.doc/.docx)、PowerPoint (.pptx)、PDF、Excel (.xlsx/.xls)、图片或扫描文档。包括读取/提取文本、编辑/修改格式、创建新文档、合并/拆分 PDF、提取表格/图片、OCR 识别等。如果用户的 deliverable 是 Word/PPT/PDF/Excel 文件，使用此 skill。
   不触发：用户的核心需求是编写独立脚本/网页应用/数据管道/数据库查询，文档只是辅助输出（如生成 HTML 报告、纯代码文件）。

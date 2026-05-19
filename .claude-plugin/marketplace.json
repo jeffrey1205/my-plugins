@@ -3,7 +3,7 @@
   "name": "my-plugins",
   "description": "个人 Claude Code 插件集合，包含开发工具、文档处理 Skill 等扩展",
   "owner": {
-    "name": "zhujingfeng"
+    "name": "Jeffrey"
   },
   "plugins": [
     {
@@ -12,18 +12,18 @@
       "category": "development",
       "source": "./plugins/serena",
       "homepage": "https://github.com/jeffrey1205/my-plugins",
-      "tags": [
+      "keywords": [
         "mcp",
         "code-analysis"
       ]
     },
     {
-      "name": "doc-tools",
+      "name": "docs",
       "description": "文档处理工具 Skill 插件：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景，提供环境检测、工具速查和参考文档索引。",
       "category": "productivity",
-      "source": "./plugins/doc-tools",
+      "source": "./plugins/docs",
       "homepage": "https://github.com/jeffrey1205/my-plugins",
-      "tags": [
+      "keywords": [
         "skill",
         "document",
         "ocr",

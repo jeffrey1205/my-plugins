@@ -13,7 +13,7 @@
 
 /plugin install my-plugins/serena
 
-/plugin install my-plugins/doc-tools
+/plugin install my-plugins/docs
 ```
 
 ## 插件列表
@@ -21,7 +21,7 @@
 | 插件名 | 类型 | 描述 |
 |--------|------|------|
 | [serena](./plugins/serena) | MCP Server | 语义代码分析 MCP 服务器，提供智能代码理解、重构建议和代码库导航 |
-| [doc-tools](./plugins/doc-tools) | Skill | 文档处理工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
+| [docs](./plugins/docs) | Skill | 文档处理工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
 
 ## 目录结构
 
@@ -32,21 +32,23 @@
 └── plugins/
     ├── serena/
     │   ├── .claude-plugin/
-    │   │   └── .plugin.json  # 插件清单文件
+    │   │   └── plugin.json   # 插件清单文件
     │   ├── .mcp.json         # MCP 服务器配置
     │   └── hooks/
     │       └── hooks.json    # Hook 配置
-    └── doc-tools/
+    └── docs/
         ├── .claude-plugin/
-        │   └── .plugin.json  # 插件清单文件
-        ├── SKILL.md          # 技能指引
-        └── references/       # 参考文档
+        │   └── plugin.json   # 插件清单文件
+        └── skills/
+            └── proc/
+                ├── SKILL.md      # 技能指引
+                └── references/   # 参考文档
 ```
 
 ## 添加新插件
 
 在 `plugins/` 目录下新建插件目录，包含：
-- `.claude-plugin/.plugin.json` — 插件清单（name, description, version 等）
+- `.claude-plugin/plugin.json` — 插件清单（name, description, version 等）
 - `.mcp.json` — MCP 服务器配置（如适用）
 - `hooks/hooks.json` — Hook 配置（如适用）
 

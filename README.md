@@ -21,7 +21,7 @@
 | 插件名 | 类型 | 描述 |
 |--------|------|------|
 | [serena](./plugins/serena) | MCP Server | 语义代码分析 MCP 服务器，提供智能代码理解、重构建议和代码库导航 |
-| [docs](./plugins/docs) | Skill | 文档处理工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
+| [docs](./plugins/docs) | Skill | 面向直接处理文档与扫描件的工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
 
 ## 前置依赖
 

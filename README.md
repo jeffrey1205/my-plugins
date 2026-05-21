@@ -62,12 +62,15 @@ uv tool upgrade serena-agent
         ├── .claude-plugin/
         │   └── plugin.json   # 插件清单文件
         └── skills/
-            └── performance-review/
-                ├── SKILL.md      # 性能分析技能指引
-                ├── evals.json    # 评测配置
-                ├── evals/        # 评测用例
-                ├── references/   # 参考文档
-                └── scripts/      # 采集脚本
+            ├── performance-review/
+            │   ├── SKILL.md      # 性能分析技能指引
+            │   ├── evals.json    # 评测配置
+            │   ├── evals/        # 评测用例
+            │   ├── references/   # 参考文档
+            │   └── scripts/      # 采集脚本
+            └── codebase-explainer/
+                ├── SKILL.md      # 代码理解技能指引
+                └── references/   # 参考文档
 ```
 
 ## 添加新插件

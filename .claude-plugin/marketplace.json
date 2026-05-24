@@ -74,6 +74,21 @@
         "ui",
         "context"
       ]
+    },
+    {
+      "name": "rtk",
+      "description": "CLI tool to reduce LLM token consumption by filtering command output (60-90% savings)",
+      "category": "development",
+      "source": "./plugins/rtk",
+      "homepage": "https://github.com/jeffrey1205/claude-plugins",
+      "keywords": [
+        "hook",
+        "token",
+        "cli",
+        "git",
+        "cargo",
+        "pnpm"
+      ]
     }
   ]
 }

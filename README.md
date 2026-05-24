@@ -16,6 +16,7 @@
 /plugin install docs@cc-hub
 /plugin install html-lsp@cc-hub
 /plugin install statusline@cc-hub
+/plugin install rtk@cc-hub
 ```
 
 ## 插件列表
@@ -27,6 +28,7 @@
 | [docs](./plugins/docs) | Skill | 面向直接处理文档与扫描件的工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
 | [html-lsp](./plugins/html-lsp) | LSP | HTML/CSS/ESLint 语言服务器集成，提供前端开发时的语法检查、代码补全和实时 lint 诊断 |
 | [statusline](./plugins/statusline) | Command | 自适应终端宽度的状态行插件，显示上下文窗口、Git、Token、Effort 等信息 |
+| [rtk](./plugins/rtk) | Hook | CLI 工具，过滤命令输出减少 LLM token 消耗（节省 60-90%） |
 
 ## 目录结构
 
@@ -48,31 +50,40 @@
     │       └── proc/
     │           ├── SKILL.md      # 技能指引
     │           └── references/   # 参考文档
-    └── coder/
+    ├── coder/
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json   # 插件清单文件
+    │   └── skills/
+    │       ├── performance-review/
+    │       │   ├── SKILL.md      # 性能分析技能指引
+    │       │   ├── evals.json    # 评测配置
+    │       │   ├── evals/        # 评测用例
+    │       │   ├── references/   # 参考文档
+    │       │   └── scripts/      # 采集脚本
+    │       └── codebase-explainer/
+    │           ├── SKILL.md      # 代码理解技能指引
+    │           └── references/   # 参考文档
+    ├── html-lsp/
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json   # 插件清单文件
+    │   └── .lsp.json         # LSP 服务器配置
+    ├── statusline/
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json   # 插件清单文件
+    │   ├── commands/
+    │   │   └── setup.md      # setup 命令
+    │   └── scripts/
+    │       ├── statusline.py       # 状态行脚本
+    │       └── setup-statusline.py # 配置脚本
+    └── rtk/
         ├── .claude-plugin/
         │   └── plugin.json   # 插件清单文件
-        └── skills/
-            ├── performance-review/
-            │   ├── SKILL.md      # 性能分析技能指引
-            │   ├── evals.json    # 评测配置
-            │   ├── evals/        # 评测用例
-            │   ├── references/   # 参考文档
-            │   └── scripts/      # 采集脚本
-            └── codebase-explainer/
-                ├── SKILL.md      # 代码理解技能指引
-                └── references/   # 参考文档
-    └── html-lsp/
-        ├── .claude-plugin/
-        │   └── plugin.json   # 插件清单文件
-        └── .lsp.json         # LSP 服务器配置
-└── statusline/
-    ├── .claude-plugin/
-    │   └── plugin.json   # 插件清单文件
-    ├── commands/
-    │   └── setup.md      # setup 命令
-    └── scripts/
-        ├── statusline.py       # 状态行脚本
-        └── setup-statusline.py # 配置脚本
+        ├── commands/
+        │   └── setup.md      # setup 命令
+        ├── hooks/
+        │   └── hooks.json    # PreToolUse hook 配置
+        └── scripts/
+            └── setup-rtk.py  # 安装脚本
 ```
 
 ## 添加新插件

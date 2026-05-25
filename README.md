@@ -109,6 +109,12 @@
 
 然后在 `.claude-plugin/marketplace.json` 的 `plugins` 数组中添加新条目。
 
+## 参考文档
+[创建插件](https://code.claude.com/docs/zh-CN/plugins)
+
+[插件参考](https://code.claude.com/docs/zh-CN/plugins-reference)
+
+
 ## 许可证
 
 MIT

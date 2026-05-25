@@ -1,6 +1,8 @@
 ---
 name: serena-setup
 description: 配置 Serena MCP，检测安装状态并配置语言服务器
+model: haiku
+effort: low
 ---
 
 # Serena Setup

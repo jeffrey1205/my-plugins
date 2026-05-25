@@ -1,6 +1,6 @@
 {
   "name": "rtk",
-  "displayName": "RTK (Rust Token Killer)",
+  "displayName": "RTK",
   "version": "1.0.0",
   "description": "CLI tool to reduce LLM token consumption by filtering command output (60-90% savings)"
 }

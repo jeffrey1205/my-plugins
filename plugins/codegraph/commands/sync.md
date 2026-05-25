@@ -1,6 +1,8 @@
 ---
 name: sync
 description: 增量同步当前项目的代码索引（仅处理变更文件）
+model: haiku
+effort: low
 ---
 
 执行 `codegraph sync` 增量更新索引：

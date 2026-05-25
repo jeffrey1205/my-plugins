@@ -1,6 +1,8 @@
 ---
 name: install
 description: 全局安装 codegraph CLI
+model: haiku
+effort: low
 ---
 
 安装 codegraph CLI：

@@ -1,6 +1,8 @@
 ---
 name: reindex
 description: 全量重建当前项目的代码索引（清除旧索引后重建）
+model: haiku
+effort: low
 ---
 
 执行 `codegraph index --force` 全量重建索引：

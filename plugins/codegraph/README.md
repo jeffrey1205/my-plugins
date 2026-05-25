@@ -37,23 +37,6 @@ npm i -g @colbymchenry/codegraph
 /codegraph:sync
 ```
 
-### 4. 使用 MCP 工具
-
-初始化并同步后，以下 MCP 工具会自动可用：
-
-| 工具 | 用途 |
-|------|------|
-| `codegraph_search` | 按名称搜索符号 |
-| `codegraph_context` | 构建任务相关代码上下文 |
-| `codegraph_trace` | 追踪两个符号间的调用路径 |
-| `codegraph_callers` | 查找调用者 |
-| `codegraph_callees` | 查找被调用者 |
-| `codegraph_impact` | 分析修改影响范围 |
-| `codegraph_explore` | 批量获取相关符号源码 |
-| `codegraph_node` | 获取单个符号详情 |
-| `codegraph_files` | 获取项目文件结构 |
-| `codegraph_status` | 获取索引状态 |
-
 ## 其他命令
 
 - `/codegraph:status` - 查看索引状态

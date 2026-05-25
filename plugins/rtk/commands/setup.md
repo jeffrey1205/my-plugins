@@ -1,6 +1,8 @@
 ---
 name: setup
 description: Download and install RTK (Rust Token Killer) binary globally
+model: haiku
+effort: low
 ---
 
 检测并安装 RTK。如果已安装，询问用户是否需要重新安装。

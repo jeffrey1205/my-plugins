@@ -1,5 +1,6 @@
 {
   "name": "serena",
+  "displayName": "Serena",
   "description": "Semantic code analysis MCP server providing intelligent code understanding, refactoring suggestions, and codebase navigation through language server protocol integration.",
   "version": "1.0.1",
   "author": {

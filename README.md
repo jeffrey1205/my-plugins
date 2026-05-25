@@ -17,6 +17,7 @@
 /plugin install html-lsp@cc-hub
 /plugin install statusline@cc-hub
 /plugin install rtk@cc-hub
+/plugin install codegraph@cc-hub
 ```
 
 ## 插件列表
@@ -29,6 +30,7 @@
 | [html-lsp](./plugins/html-lsp) | LSP | HTML/CSS/ESLint 语言服务器集成，提供前端开发时的语法检查、代码补全和实时 lint 诊断 |
 | [statusline](./plugins/statusline) | Command | 自适应终端宽度的状态行插件，显示上下文窗口、Git、Token、Effort 等信息 |
 | [rtk](./plugins/rtk) | Hook | CLI 工具，过滤命令输出减少 LLM token 消耗（节省 60-90%） |
+| [codegraph](./plugins/codegraph) | MCP Server | 代码图谱 MCP 服务器，使用 tree-sitter 构建知识图谱，提供语义搜索、调用图分析、影响分析等功能 |
 
 ## 目录结构
 
@@ -77,6 +79,16 @@
     │   └── scripts/
     │       ├── statusline.py       # 状态行脚本
     │       └── setup-statusline.py # 配置脚本
+    ├── codegraph/
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json   # 插件清单文件
+    │   ├── .mcp.json         # MCP 服务器配置
+    │   └── commands/
+    │       ├── install.md    # 安装 CLI
+    │       ├── init.md       # 初始化索引
+    │       ├── sync.md       # 增量同步索引
+    │       ├── status.md     # 索引状态
+    │       └── reindex.md    # 全量重建索引
     └── rtk/
         ├── .claude-plugin/
         │   └── plugin.json   # 插件清单文件

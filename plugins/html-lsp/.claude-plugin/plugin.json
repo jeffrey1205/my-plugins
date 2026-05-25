@@ -1,5 +1,6 @@
 {
   "name": "html-lsp",
+  "displayName": "HTML LSP",
   "version": "0.1.0",
   "description": "HTML, CSS, and ESLint language servers from VS Code",
   "author": {

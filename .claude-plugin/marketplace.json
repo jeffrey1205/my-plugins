@@ -89,6 +89,21 @@
         "cargo",
         "pnpm"
       ]
+    },
+    {
+      "name": "codegraph",
+      "description": "代码图谱MCP服务器，使用 tree-sitter 构建知识图谱，提供语义搜索、调用图分析、影响分析等功能，支持 19+ 语言。",
+      "category": "development",
+      "source": "./plugins/codegraph",
+      "homepage": "https://github.com/colbymchenry/codegraph",
+      "keywords": [
+        "mcp",
+        "code-analysis",
+        "semantic-search",
+        "tree-sitter",
+        "call-graph",
+        "impact-analysis"
+      ]
     }
   ]
 }

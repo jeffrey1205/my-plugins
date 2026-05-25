@@ -1,6 +1,6 @@
 {
   "name": "statusline",
-  "displayName": "Custom Statusline",
+  "displayName": "Statusline",
   "version": "1.0.0",
   "description": "自适应终端宽度的状态行插件，显示上下文窗口、Git、Token、Effort 等信息",
   "author": {

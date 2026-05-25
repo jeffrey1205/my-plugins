@@ -24,7 +24,7 @@
 | 插件名 | 类型 | 描述 |
 |--------|------|------|
 | [serena](./plugins/serena) | MCP Server | 语义代码分析 MCP 服务器，提供智能代码理解、重构建议和代码库导航 |
-| [coder](./plugins/coder) | Skill | 面向 C/Go/Python 后端工程师的性能分析与代码审查工具集，覆盖 CPU、内存、吞吐/时延、定时任务等维度，适配网络设备（fw/ids/gap/gateway）场景 |
+| [coder](./plugins/coder) | Skill + Command | 面向 C/Go/Python 后端工程师的性能分析与代码审查工具集，覆盖 CPU、内存、吞吐/时延、定时任务等维度，适配网络设备（fw/ids/gap/gateway）场景；新增 `/coder:lsp-setup` 命令用于安装语言服务器 |
 | [docs](./plugins/docs) | Skill | 面向直接处理文档与扫描件的工具集：支持 Word、PowerPoint、PDF、Excel、图片 OCR 等场景 |
 | [html-lsp](./plugins/html-lsp) | LSP | HTML/CSS/ESLint 语言服务器集成，提供前端开发时的语法检查、代码补全和实时 lint 诊断 |
 | [statusline](./plugins/statusline) | Command | 自适应终端宽度的状态行插件，显示上下文窗口、Git、Token、Effort 等信息 |
@@ -53,6 +53,8 @@
     ├── coder/
     │   ├── .claude-plugin/
     │   │   └── plugin.json   # 插件清单文件
+    │   ├── commands/
+    │   │   └── lsp-setup.md  # LSP 安装命令
     │   └── skills/
     │       ├── performance-review/
     │       │   ├── SKILL.md      # 性能分析技能指引
